@@ -11,8 +11,8 @@ public:
     Compte(std::string iban, Client client, int solde);
     int getSolde();
     std::string getIban();
-    void retrait(int montant);
-    void paiement(int montant);
-    void credit(int montant);
+    void retrait();
+    void paiement();
+    void credit();
     void transfert(int montant, std::string iban);
 };
