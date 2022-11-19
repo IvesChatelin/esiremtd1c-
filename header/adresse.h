@@ -1,3 +1,6 @@
+#ifndef _ADRESSE_H
+#define _ADRESSE_H
+
 #include <string>
 
 class Adresse
@@ -10,4 +13,7 @@ private:
     std::string _pays;
 public:
     Adresse(int numRue, std::string nomRue, int codePostal, std::string ville, std::string pays);
+    void updateAdresse();
 };
+
+#endif

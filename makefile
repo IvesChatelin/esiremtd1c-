@@ -1,14 +1,17 @@
-bank : main.o client.o compte.o
-	g++ -o bank client.o main.o compte.o
+bank : main.o client.o compte.o adresse.o
+	g++ -o bank client.o main.o compte.o adresse.o
 
-compte.o : compte.cpp
-	g++ -c compte.cpp
+adresse.o: cpp/adresse.cpp
+	g++ -c cpp/adresse.cpp
+
+compte.o : cpp/compte.cpp
+	g++ -c cpp/compte.cpp
 
 main.o : main.cpp
 	g++ -c main.cpp 
 
-client.o : client.cpp
-	g++ -c client.cpp 
+client.o : cpp/client.cpp
+	g++ -c cpp/client.cpp 
 
 clean : 
 	rm -rf *.o 

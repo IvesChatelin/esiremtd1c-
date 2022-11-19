@@ -1,8 +1,12 @@
 #include <iostream>
-#include "compte.h" // remaque juste compte.h et pas client.h
+#include "header/adresse.h"
+#include "header/client.h"
+#include "header/date.h"
+#include "header/compte.h" // remaque juste compte.h et pas client.h
 
 int main(){
-    Client cl("NZOKOU","ives");
+    Adresse adr(49,"Rue des ebazoires",21000,"Dijon","France");
+    Client cl("NZOKOU","ives",adr);
     Compte cp("FRA 01 258964752 47", cl, 1900);
     std::cout << "-------------------- Compte ----------------------" << std::endl;
     std::cout << "IBAN : " << cp.getIban() <<std::endl;
